@@ -11,7 +11,9 @@ import javax.xml.ws.RequestWrapper;
 
 /**
  * Created by Snake on 2017/5/19.
+ * 注解方式进行访问
  */
+
 
 @Controller
 public class UserController {
@@ -23,10 +25,16 @@ public class UserController {
         return new ModelAndView("/Annotation","result",s);
     }
 
-
     @RequestMapping(value = "/user/deleteuser",method = RequestMethod.GET)
     public ModelAndView deleteUser(){
         String s = "this is delUser annotation";
+        System.out.print(s);
+        return new ModelAndView("/Annotation","result",s);
+    }
+
+    @RequestMapping(value = "/user/changeuser",method = RequestMethod.GET)
+    public ModelAndView changeUser(){
+        String s = "this is changeUser annotation";
         System.out.print(s);
         return new ModelAndView("/Annotation","result",s);
     }
