@@ -14,8 +14,12 @@
     <!--注解扫描包-->
     <context:component-scan base-package="com.snake.controller.annotation"></context:component-scan>
     <!--开启注解-->
+
+    <mvc:annotation-driven/>
+    <!--等同于下面2个bean spring3.0之后支持
     <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
     <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"/>
+    -->
     <!-- 静态资源访问-->
     <mvc:resources location="/img/" mapping="/img/**"/>
 

@@ -16,6 +16,7 @@ import javax.xml.ws.RequestWrapper;
 
 
 @Controller
+@RequestMapping("/user2")
 public class UserController {
 
     @RequestMapping(value = "/user/adduser",method = RequestMethod.POST)
@@ -42,5 +43,14 @@ public class UserController {
     @RequestMapping(value = "/user/touser", method = RequestMethod.GET)
     public ModelAndView toUser(){
         return new ModelAndView("/Annotation");
+    }
+
+    /**
+     * 优化的写法
+     * @return
+     */
+    @RequestMapping("/user/touser2")
+    public String toUser2(){
+        return "/Annotation";
     }
 }
