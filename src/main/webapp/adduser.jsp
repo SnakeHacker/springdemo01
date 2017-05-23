@@ -3,6 +3,8 @@
 <html>
 <head>
     <title>Annotation</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
     <script type="text/javascript">
         function adduser() {
             var form = document.forms[0];
